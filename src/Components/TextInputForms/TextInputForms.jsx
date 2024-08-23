@@ -22,7 +22,7 @@ function TextInputForm({handleFormSubmit, handletextInputChange, value, inputTyp
       </div>
 
       <div className='flex'>
-         <Button text={'ok'} type={'submit'} styleType={'Primary'}/>
+         <Button text={'ok'} buttonType={'submit'} styleType={'Primary'}/>
       </div>
     </form>
   );

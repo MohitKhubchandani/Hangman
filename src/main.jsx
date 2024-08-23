@@ -5,7 +5,9 @@ import './index.css'
 
 
 createRoot(document.getElementById('root')).render(
-      <>
-     <App/>
-     </>
+      <React.SrictMode>
+      <BrowserRouter>
+      <App/>
+     </BrowserRouter>
+     </React.SrictMode>
 )
