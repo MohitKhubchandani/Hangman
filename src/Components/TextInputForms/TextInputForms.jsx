@@ -8,7 +8,9 @@ import {useState} from 'react'
 function TextInputForm({handleFormSubmit, handletextInputChange, value, inputType = 'text', setInputType }){
 
   return (
-    <form className='flex items-end'  onSubmit={handleFormSubmit}>
+      
+    
+    <form className='flex items-end' onSubmit={handleFormSubmit}>
       <div className='flex-1 mr-2'>
       <TextInput label={'enter a word or phrase'} type={inputType} onChange={handletextInputChange} value={value} label='Enter a text'/>
       </div>
