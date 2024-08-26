@@ -17,7 +17,8 @@ function LetterButtons({ usedLetters, onLetterClick }){
     onLetterClick?.(value)
   }
 
-  const buttons = Alphabets.map(letter => {
+ 
+ const buttons = Alphabets.map(letter => {
   return(
     <>
     <button 
@@ -28,7 +29,8 @@ function LetterButtons({ usedLetters, onLetterClick }){
     className={`h-12 w-12 ${buttonStyle(letter)}`} >{letter}</button>
     </>
   )}) 
-  
+
+
   return(
     <>
     {buttons}
