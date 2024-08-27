@@ -1,5 +1,3 @@
-
-
 function TextInput({label , type, value, onChange}){
   return (
     <label className='block'>

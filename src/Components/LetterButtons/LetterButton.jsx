@@ -10,7 +10,7 @@ function LetterButtons({ text, usedLetters, onLetterClick }){
     if(selectedLetters.has(letter)){
       return `${orignalCharacters.has(letter) ? `bg-green-400 text-white font-bold py-2 px-4 rounded m-1 shadow-md` : `bg-gray-400 text-white font-bold py-2 px-4 rounded m-1 shadow-md cursor-not-allowed`}`
     }else{
-      return ' black-white font-bold py-2 px-4 rounded m-1 shadow-md transition duration-300 ease-in-out hover:bg-blue-700 active:scale-95'
+      return 'black-white font-bold py-2 px-4 rounded m-1 shadow-md transition duration-300 ease-in-out hover:bg-blue-700 active:scale-95'
     }
   }
 
@@ -35,8 +35,8 @@ function LetterButtons({ text, usedLetters, onLetterClick }){
   });
   
   return (
-    <div className="flex justify-center">
-      <div className="flex w-1/3 flex-wrap justify-center">
+    <div className="flex justify-center" >
+      <div className="flex w-1/2 flex-wrap justify-center ">
         {buttons}
       </div>
     </div>

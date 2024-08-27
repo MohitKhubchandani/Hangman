@@ -10,8 +10,8 @@ function App(){
     <TextInputFormContainer onSubmit={(value) => console.log('value coming from the hidden firm is', value)}/> */}
    
     <Routes>
-      <Route path="/play" element={<PlayGame/>}/>
-      <Route path="/start"element={<StartGame/>}/>
+      <Route path="/"element={<StartGame/>}/>
+      <Route path="/Hangman" element={<PlayGame/>}/>
     </Routes>
   </>
  ) 
