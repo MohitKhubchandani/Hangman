@@ -4,6 +4,7 @@ import MaskedText from '../../Components/MaskedText/MaskedText';
 import LetterButtons from '../../Components/LetterButtons/LetterButton';
 import HangMan from '../../Components/HangMan/HangMan';
 import GameOverCard from '../../Components/GameOverCard/GameOverCard';
+import YouWin from '../../Components/YouWinPage/YouWin';
 
 const PlayGame = () => {
   const [step, setStep] = useState(0);
@@ -82,15 +83,7 @@ const PlayGame = () => {
       {gameOver ? (
         <GameOverCard onTryAgain={resetGame} />
       ) : win ? (
-        <div className="text-center">
-          <h2 className="text-6xl font-extrabold text-green-600">You Win!</h2>
-          <button
-            className="text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r bg-violet-400 transform scale-105 transition-transform duration-300 ease-in-out hover:scale-110 hover:bg-gradient-to-br hover:from-yellow-500 hover:via-pink-600 hover:to-purple-700 hover:underline hover:text-black mt-8"
-            onClick={resetGame}
-          >
-            Play Again
-          </button>
-        </div>
+        <YouWin PlayAgain={resetGame}/>
       ) : (
         <>
           <MaskedText text={wordSelected} usedLetters={usedLetters}/>      
