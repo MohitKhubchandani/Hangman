@@ -10,7 +10,7 @@ const PlayGame = () => {
   const [usedLetters, setUsedLetters] = useState([]);
   const [gameOver, setGameOver] = useState(false);
   const [win, setWin] = useState(false);
-  const [isMobile, setIsMobile] = useState(window.innerWidth <= 1200); // Adjust the width as needed
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 1200);
   const location = useLocation();
   const wordSelected = location.state?.wordSelected;
 
