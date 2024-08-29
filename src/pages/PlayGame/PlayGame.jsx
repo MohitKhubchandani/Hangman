@@ -5,6 +5,8 @@ import LetterButtons from '../../Components/LetterButtons/LetterButton';
 import HangMan from '../../Components/HangMan/HangMan';
 import GameOverCard from '../../Components/GameOverCard/GameOverCard';
 import YouWin from '../../Components/YouWinPage/YouWin';
+import ScreenSizeWarning from '../../Components/ScreenSizeWarning/ScreenSizeWarning';
+
 
 const PlayGame = () => {
   const [step, setStep] = useState(0);
@@ -63,18 +65,10 @@ const PlayGame = () => {
 
   if (isMobile) {
     return (
-      <div className="text-center mt-20">
-        <h1 className="text-4xl font-bold text-red-500">Not Available on Mobile</h1>
-        <p className="text-xl mt-4">This game is not available on mobile devices. Please use a desktop or tablet.</p>
-        <Link 
-          to="/" 
-          className="text-xl font-semibold text-blue-500 mt-8 block"
-        >
-          Go Home
-        </Link>
-      </div>
+      <ScreenSizeWarning/>
     );
   }
+
 
   return (
     <div>
@@ -83,7 +77,7 @@ const PlayGame = () => {
       {gameOver ? (
         <GameOverCard onTryAgain={resetGame} />
       ) : win ? (
-        <YouWin PlayAgain={resetGame}/>
+        <YouWin />
       ) : (
         <>
           <MaskedText text={wordSelected} usedLetters={usedLetters}/>      
