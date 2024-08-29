@@ -1,6 +1,8 @@
+import NotFoundPage from "../../Components/NotFoundPage/NotFound";
 import getRandomWord from "../../Components/randomWords/RandomWords";
 import TextInputFormContainer from "../../Components/TextInputForms/TextInputFormContainer";
 import {useNavigate} from 'react-router-dom'
+
 
 function StartGame(){
   const navigator = useNavigate();
@@ -26,7 +28,6 @@ function StartGame(){
         overflow-hidden
       "
     >
-      <span className="absolute inset-0 bg-pink-400 rounded-full blur opacity-75"></span>
       <span className="relative z-10">Start Game</span>
     </button>
   </div> 
