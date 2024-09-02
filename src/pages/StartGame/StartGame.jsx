@@ -1,5 +1,5 @@
 import NotFoundPage from "../../Components/NotFoundPage/NotFound";
-import getRandomWord from "../../Components/randomWords/RandomWords";
+import getRandomWord from "../../Components/RandomWords/RandomWords";
 import TextInputFormContainer from "../../Components/TextInputForms/TextInputFormContainer";
 import {useNavigate} from 'react-router-dom'
 
